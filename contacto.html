@@ -161,3 +161,31 @@
               <div class="invalid-feedback">Por favor agrega alguna nota o escribe N/A.</div>
             </div>
             
+            <!--COMPRA -->
+            <div class="p-3 bg-light rounded-4 border d-flex flex-column flex-sm-row justify-content-between align-items-center mb-4 gap-2">
+              <div>
+                <span class="fw-bold fs-5 text-secondary">Total Calculado:</span>
+                <small class="d-block text-muted">Incluye peluche, tamaño y extras seleccionados</small>
+              </div>
+              <span class="fw-bold fs-3 text-danger" id="txtTotal">$0.00 MXN</span>
+            </div>
+            
+            <!-- Términos y Condiciones -->
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="checkTerminos" required>
+              <label class="form-check-label text-muted small" for="checkTerminos">
+                Acepto los términos de compra y confirmo que la información ingresada es correcta *
+              </label>
+              <div class="invalid-feedback">Debes aceptar los términos para continuar.</div>
+            </div>
+
+            <!-- Botones -->
+            <div class="d-flex gap-3">
+              <button type="submit" class="btn btn-peluche btn-lg w-100 py-3 fs-5"><i class="fa-solid fa-heart me-2"></i>Confirmar y Enviar Pedido</button>
+              <button type="reset" class="btn btn-outline-secondary btn-lg rounded-pill px-4" id="btnReset">Limpiar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
