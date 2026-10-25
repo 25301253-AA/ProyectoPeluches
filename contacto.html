@@ -67,5 +67,32 @@
                 </div>
                 <hr class="my-4">
 
-
-        
+                <!--SELECCIÓN DEL PELUCHE Y DETALLES -->
+            <h5 class="fw-bold text-secondary mb-3"><i class="fa-solid fa-bear-card-to-pocket me-2"></i>2. Selección y Personalización</h5>
+            
+            <div class="row g-3 mb-3">
+              <div class="col-md-8">
+                <label for="selectPeluche" class="form-label fw-semibold">Selecciona el Peluche Principal *</label>
+                <select class="form-select rounded-pill px-3" id="selectPeluche" required>
+                  <option value="" disabled selected>-- Selecciona un personaje --</option>
+                  <optgroup label="Colección Marvel">
+                    <option value="320">Spider-Man Chibi - $320 MXN</option>
+                    <option value="350">Iron Man Peluche - $350 MXN</option>
+                    <option value="310">Capitán América - $310 MXN</option>
+                    <option value="290">Baby Groot - $290 MXN</option>
+                  </optgroup>
+                  <optgroup label="Colección Clásicos">
+                    <option value="380">Snoopy con Ramito de Flores - $380 MXN</option>
+                    <option value="390">Lotso (Con Aroma a Fresa) - $390 MXN</option>
+                    <option value="360">Gato Lucifer Esponjoso - $360 MXN</option>
+                    <option value="420">Osito Gigante Azul - $300 MXN</option>
+                  </optgroup>
+                </select>
+                <div class="invalid-feedback">Selecciona un peluche.</div>
+              </div>
+              <div class="col-md-4">
+                <label for="inputCantidad" class="form-label fw-semibold">Cantidad *</label>
+                <input type="number" class="form-control rounded-pill px-3" id="inputCantidad" min="1" max="20" value="1" required>
+              </div>
+            </div>
+            
