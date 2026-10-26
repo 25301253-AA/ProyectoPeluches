@@ -3,51 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Mundo Esponjoso de los Peluches</title>
+  <title>El Mundo Esponjoso de los Peluches | Realizar Pedido</title>
   
-  <!-- CSS de Bootstrap 5 -->
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="styleheet">
-  <!-- Íconos y Animaciones -->
+  <!-- FontAwesome y AOS -->
   <link rel="styleheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="styleheet">
-  <!-- Tu archivo de estilos -->
+  
+  <!-- Tus Estilos -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-2">
+<body class="bg-light">
+
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-2">
     <div class="container-fluid px-4">
       <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="index.html">
-        <img src="Logo.jpeg" alt="Logo" class="brand-logo">
+        <img src="Logo.jpeg" alt="Logo" class="brand-logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
         <span class="fw-bold text-dark fs-4">El Mundo Esponjoso de los Peluches</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-        <ul class="navbar-nav fs-5 fw-semibold gap-3 align-items-lg-center mb-0 ps-0" style="list-style: none;">
-          <li class="nav-item"><a class="nav-link text-decoration-none" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link text-decoration-none" href="marvel.html">Marvel</a></li>
-          <li class="nav-item"><a class="nav-link text-decoration-none" href="clasicos.html">Clásicos</a></li>
-          <li class="nav-item"><a class="nav-link text-decoration-none" href="nosotros.html">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link text-decoration-none" href="contacto.html">Pedidos</a></li>
+        <ul class="navbar-nav fs-5 fw-semibold gap-3 align-items-lg-center mb-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="marvel.html">Marvel</a></li>
+          <li class="nav-item"><a class="nav-link" href="clasicos.html">Clásicos</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link active text-danger" href="contacto.html">Pedidos</a></li>
         </ul>
       </div>
     </div>
   </nav>
-      <main class="container py-5">
+
+  <!-- Contenedor Principal del Formulario -->
+  <main class="container my-5">
     <div class="row justify-content-center">
-      <div class="col-lg-8" data-aos="fade-up">
+      <div class="col-lg-10">
         <div class="bg-white p-4 p-md-5 rounded-4 shadow">
-          <h2 class="fw-bold text-center text-danger mb-4"><i class="fa-solid fa-paper-plane me-2"></i>Formulario de Cotización y Pedidos</h2>
+          
+          <h2 class="fw-bold text-center text-danger mb-2"><i class="fa-solid fa-paper-plane me-2"></i>Formulario de Cotización y Pedidos</h2>
           <p class="text-center text-muted mb-4">Selecciona tu peluche y completa tus datos. No requiere registro ni base de datos.</p>
+
+          <form id="formPedido" novalidate>
             
-          <!-- Contenedor Principal (Haciendo el cuadro más amplio) -->
-  <main class="container-fluid py-5 px-3 px-md-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-xl-10" data-aos="fade-up">
-        
-          <!--Datos Personales -->
-            <h5 class="fw-bold text-secondary mb-3"><i class="fa-solid fa-user me-2"></i>1. Datos del Cliente</h5>
+            <!--Datos del Cliente -->
+            <h5 class="fw-bold text-secondary mb-3 border-bottom pb-2">1. Datos del Cliente</h5>
             <div class="row g-3 mb-4">
               <div class="col-md-6">
                 <label for="inputNombre" class="form-label fw-semibold">Nombre Completo *</label>
@@ -61,35 +64,34 @@
               </div>
               <div class="col-md-6">
                 <label for="inputTelefono" class="form-label fw-semibold">Teléfono de Contacto *</label>
-                <input type="tel" class="form-control rounded-pill px-3" id="inputTelefono" placeholder="773 123 4567" required>
+                <input type="tel" class="form-control rounded-pill px-3" id="inputTelefono" placeholder="773 000 0000" required>
                 <div class="invalid-feedback">Ingresa tu número de teléfono.</div>
               </div>
-                <div class="col-md-6">
+              <div class="col-md-6">
                 <label for="inputFechaEntrega" class="form-label fw-semibold">Fecha Deseada de Entrega *</label>
-                <input type="text" class="form-control rounded-pill px-3" id="inputFechaEntrega" placeholder="Ej.Viernes en la tarde 30 de Octubre" required>
-                <div class="invalid-feedback">Por favor escribe la fecha o día de entrega.</div>
-                </div>
-                <hr class="my-4">
+                <input type="text" class="form-control rounded-pill px-3" id="inputFechaEntrega" placeholder="Ej. Martes por la tarde" required>
+                <div class="invalid-feedback">Escribe la fecha o día de entrega.</div>
+              </div>
+            </div>
 
-                <!--SELECCIÓN DEL PELUCHE Y DETALLES -->
-            <h5 class="fw-bold text-secondary mb-3"><i class="fa-solid fa-bear-card-to-pocket me-2"></i>2. Selección y Personalización</h5>
+            <!--Selección y Personalización -->
+            <h5 class="fw-bold text-secondary mb-3 border-bottom pb-2">2. Selección y Personalización</h5>
             
             <div class="row g-3 mb-3">
               <div class="col-md-8">
                 <label for="selectPeluche" class="form-label fw-semibold">Selecciona el Peluche Principal *</label>
                 <select class="form-select rounded-pill px-3" id="selectPeluche" required>
-                  <option value="" disabled selected>-- Selecciona un personaje --</option>
-                  <optgroup label="Colección Marvel">
+                  <option value="" disabled selected>-- Selecciona un peluche --</option>
+                  <optgroup label="Marvel">
                     <option value="320">Spider-Man Chibi - $320 MXN</option>
                     <option value="350">Iron Man Peluche - $350 MXN</option>
                     <option value="310">Capitán América - $310 MXN</option>
-                    <option value="290">Baby Groot - $290 MXN</option>
                   </optgroup>
-                  <optgroup label="Colección Clásicos">
-                    <option value="380">Snoopy con Ramito de Flores - $380 MXN</option>
-                    <option value="390">Lotso (Con Aroma a Fresa) - $390 MXN</option>
+                  <optgroup label="Clásicos">
+                    <option value="380">Snoopy con Ramito - $380 MXN</option>
+                    <option value="390">Lotso Aroma Fresa - $390 MXN</option>
                     <option value="360">Gato Lucifer Esponjoso - $360 MXN</option>
-                    <option value="420">Osito Gigante Azul - $300 MXN</option>
+                    <option value="420">Stitch Gigante Azul - $420 MXN</option>
                   </optgroup>
                 </select>
                 <div class="invalid-feedback">Selecciona un peluche.</div>
@@ -99,8 +101,8 @@
                 <input type="number" class="form-control rounded-pill px-3" id="inputCantidad" min="1" max="20" value="1" required>
               </div>
             </div>
-            
-            <!-- Tamaño y Variedad -->
+
+            <!-- Tamaño -->
             <div class="mb-3">
               <label class="form-label fw-semibold d-block">Tamaño del Peluche:</label>
               <div class="form-check form-check-inline">
@@ -117,90 +119,82 @@
               </div>
             </div>
 
-            <!-- Extra -->
+            <!-- Extras -->
             <div class="mb-4">
               <label class="form-label fw-semibold d-block">Adicionales y Presentación:</label>
               <div class="row g-2">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                   <div class="form-check">
                     <input class="form-check-input extra-check" type="checkbox" value="35" id="checkRegalo">
-                    <label class="form-check-label" for="checkRegalo">
-                      Empaque de Regalo con Moño (+ $35 MXN)
-                    </label>
+                    <label class="form-check-label" for="checkRegalo">Empaque de Regalo (+ $35)</label>
                   </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                   <div class="form-check">
                     <input class="form-check-input extra-check" type="checkbox" value="25" id="checkTarjeta">
-                    <label class="form-check-label" for="checkTarjeta">
-                      Tarjeta con Mensaje Personalizado (+ $25 MXN)
-                    </label>
+                    <label class="form-check-label" for="checkTarjeta">Tarjeta Dedicatoria (+ $25)</label>
                   </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                   <div class="form-check">
                     <input class="form-check-input extra-check" type="checkbox" value="40" id="checkPerfume">
-                    <label class="form-check-label" for="checkPerfume">
-                      Aroma Especial de Vainilla/Fresa (+ $40 MXN)
-                    </label>
+                    <label class="form-check-label" for="checkPerfume">Aroma Especial (+ $40)</label>
                   </div>
                 </div>
               </div>
             </div>
 
-            <hr class="my-4">
+            <!--Envío y Especificaciones -->
+            <h5 class="fw-bold text-secondary mb-3 border-bottom pb-2">3. Envío y Especificaciones</h5>
             
-            <!--DIRECCIÓN Y MENSAJE -->
-            <h5 class="fw-bold text-secondary mb-3"><i class="fa-solid fa-location-dot me-2"></i>3. Envío y Especificaciones</h5>
-
             <div class="mb-3">
               <label for="inputDireccion" class="form-label fw-semibold">Dirección Completa de Envío *</label>
-              <input type="text" class="form-control rounded-pill px-3" id="inputDireccion" placeholder="Calle, Número, Colonia, Municipio / Ciudad" required>
-              <div class="invalid-feedback">Por favor escribe la dirección de entrega.</div>
+              <input type="text" class="form-control rounded-pill px-3" id="inputDireccion" placeholder="Calle, Número, Colonia, Ciudad" required>
+              <div class="invalid-feedback">Escribe la dirección de entrega.</div>
             </div>
 
             <div class="mb-4">
-              <label for="inputMensaje" class="form-label fw-semibold">Notas Especiales para la Entrega o Deductoria *</label>
-              <textarea class="form-control rounded-4 p-3" id="inputMensaje" rows="3" placeholder="Escribe aquí si deseas una dedicatoria o instrucciones especiales..." required></textarea>
-              <div class="invalid-feedback">Por favor agrega alguna nota o escribe N/A.</div>
+              <label for="inputMensaje" class="form-label fw-semibold">Notas Especiales o Dedicatoria *</label>
+              <textarea class="form-control rounded-4 p-3" id="inputMensaje" rows="3" placeholder="Escribe aquí las notas..." required></textarea>
+              <div class="invalid-feedback">Agrega alguna nota o escribe N/A.</div>
             </div>
-            
-            <!--COMPRA -->
-            <div class="p-3 bg-light rounded-4 border d-flex flex-column flex-sm-row justify-content-between align-items-center mb-4 gap-2">
+
+            <!-- Total Calculado -->
+            <div class="p-3 bg-light rounded-4 border d-flex justify-content-between align-items-center mb-4">
               <div>
                 <span class="fw-bold fs-5 text-secondary">Total Calculado:</span>
-                <small class="d-block text-muted">Incluye peluche, tamaño y extras seleccionados</small>
+                <small class="d-block text-muted">Incluye peluche, tamaño y extras</small>
               </div>
               <span class="fw-bold fs-3 text-danger" id="txtTotal">$0.00 MXN</span>
             </div>
-            
-            <!-- Términos y Condiciones -->
+
+            <!-- Términos -->
             <div class="form-check mb-4">
               <input class="form-check-input" type="checkbox" id="checkTerminos" required>
               <label class="form-check-label text-muted small" for="checkTerminos">
-                Acepto los términos de compra y confirmo que la información ingresada es correcta *
+                Acepto los términos de compra y confirmo que la información es correcta *
               </label>
-              <div class="invalid-feedback">Debes aceptar los términos para continuar.</div>
+              <div class="invalid-feedback">Debes aceptar los términos.</div>
             </div>
 
             <!-- Botones -->
             <div class="d-flex gap-3">
-              <button type="submit" class="btn btn-peluche btn-lg w-100 py-3 fs-5"><i class="fa-solid fa-heart me-2"></i>Confirmar y Enviar Pedido</button>
+              <button type="submit" class="btn btn-danger btn-lg w-100 py-3 fw-bold rounded-pill">Confirmar y Enviar Pedido</button>
               <button type="reset" class="btn btn-outline-secondary btn-lg rounded-pill px-4" id="btnReset">Limpiar</button>
-                        </div>
-                    </form>
-                    </div>
-                </div>
-                </div>
-            </main>
-            <!--Pie de pagina-->
-            <footer class="py-4 text-center mt-5">
-                <p class="mb-0 fw-bold">El Mundo Esponjoso de los Peluches</p>
-            </footer>
+            </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-            <script src="funtion.js"></script>
-            </body>
-            </html>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+<!--Pie de paginaa-->
+  <footer class="py-4 text-center bg-white mt-5 border-top">
+    <p class="mb-0 fw-bold text-muted">El Mundo Esponjoso de los Peluches</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="funtion.js"></script>
+</body>
+</html>
