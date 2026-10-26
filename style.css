@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@400;600;700&display=swap');
+
+:root {
+  --rosa-principal: #ff9ebb;
+  --rosa-suave: #fff0f5;
+  --rosa-oscuro: #8b3a62;
+  --crema-fondo: #fffbf7;
+  --dorado: #d4af37;
+  --texto-oscuro: #4a3b40;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--crema-fondo);
+  color: var(--texto-oscuro);
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: 'Fredoka', cursive;
+}
+.navbar-custom {
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 158, 187, 0.2);
+}
+
+.brand-logo {
+  max-height: 55px;
+  width: auto;
+  border-radius: 50%;
+  border: 2px solid var(--rosa-principal);
+}
+.carousel-compact {
+  max-width: 420px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border: 4px solid #ffffff;
+}
+
+.carousel-compact img {
+  height: 260px;
+  object-fit: cover;
+}
+
+
