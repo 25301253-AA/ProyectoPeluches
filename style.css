@@ -20,20 +20,20 @@ body {
 h1, h2, h3, h4, h5, .navbar-brand {
   font-family: 'Fredoka', cursive;
 }
-
 .navbar-custom {
   background-color: #ffffff !important;
   box-shadow: 0 4px 15px rgba(255, 158, 187, 0.2);
 }
-
 .brand-logo {
-  height: 48px !important;
-  width: 48px !important;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid var(--rosa-principal);
+  height: 50px !important;
+  width: 50px !important;
+  min-height: 50px !important;
+  min-width: 50px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  border: 2px solid var(--rosa-principal) !important;
+  display: inline-block !important;
 }
-
 .carousel-compact {
   max-width: 380px;
   width: 100%;
