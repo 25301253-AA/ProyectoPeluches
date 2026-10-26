@@ -5,34 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El Mundo Esponjoso de los Peluches | Realizar Pedido</title>
   
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="styleheet">
-  <!-- FontAwesome y AOS -->
-  <link rel="styleheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="styleheet">
+  <!-- CSS de Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Íconos y Animaciones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
-  <!-- Tus Estilos -->
+  <!-- Tu archivo de estilos -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-light">
+<body>
 
   <!-- Navegación -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-2">
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-2">
     <div class="container-fluid px-4">
       <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="index.html">
-        <img src="Logo.jpeg" alt="Logo" class="brand-logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+        <img src="Logo.jpeg" alt="Logo" class="brand-logo">
         <span class="fw-bold text-dark fs-4">El Mundo Esponjoso de los Peluches</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-        <ul class="navbar-nav fs-5 fw-semibold gap-3 align-items-lg-center mb-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="marvel.html">Marvel</a></li>
-          <li class="nav-item"><a class="nav-link" href="clasicos.html">Clásicos</a></li>
-          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link active text-danger" href="contacto.html">Pedidos</a></li>
+        <ul class="navbar-nav fs-5 fw-semibold gap-3 align-items-lg-center mb-0 ps-0" style="list-style: none;">
+          <li class="nav-item"><a class="nav-link text-decoration-none" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-decoration-none" href="marvel.html">Marvel</a></li>
+          <li class="nav-item"><a class="nav-link text-decoration-none" href="clasicos.html">Clásicos</a></li>
+          <li class="nav-item"><a class="nav-link text-decoration-none" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link text-decoration-none active text-danger" href="contacto.html">Pedidos</a></li>
         </ul>
       </div>
     </div>
@@ -41,8 +41,8 @@
   <!-- Contenedor Principal del Formulario -->
   <main class="container my-5">
     <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="bg-white p-4 p-md-5 rounded-4 shadow">
+      <div class="col-lg-9">
+        <div class="card card-form shadow-sm p-4 p-md-5 border-0 rounded-4" data-aos="fade-up">
           
           <h2 class="fw-bold text-center text-danger mb-2"><i class="fa-solid fa-paper-plane me-2"></i>Formulario de Cotización y Pedidos</h2>
           <p class="text-center text-muted mb-4">Selecciona tu peluche y completa tus datos. No requiere registro ni base de datos.</p>
@@ -76,7 +76,6 @@
 
             <!--Selección y Personalización -->
             <h5 class="fw-bold text-secondary mb-3 border-bottom pb-2">2. Selección y Personalización</h5>
-            
             <div class="row g-3 mb-3">
               <div class="col-md-8">
                 <label for="selectPeluche" class="form-label fw-semibold">Selecciona el Peluche Principal *</label>
@@ -119,7 +118,7 @@
               </div>
             </div>
 
-            <!-- Extras -->
+            <!-- Adicionales -->
             <div class="mb-4">
               <label class="form-label fw-semibold d-block">Adicionales y Presentación:</label>
               <div class="row g-2">
@@ -146,7 +145,6 @@
 
             <!--Envío y Especificaciones -->
             <h5 class="fw-bold text-secondary mb-3 border-bottom pb-2">3. Envío y Especificaciones</h5>
-            
             <div class="mb-3">
               <label for="inputDireccion" class="form-label fw-semibold">Dirección Completa de Envío *</label>
               <input type="text" class="form-control rounded-pill px-3" id="inputDireccion" placeholder="Calle, Número, Colonia, Ciudad" required>
@@ -177,9 +175,9 @@
               <div class="invalid-feedback">Debes aceptar los términos.</div>
             </div>
 
-            <!-- Botones -->
+            <!-- Botones de Acción -->
             <div class="d-flex gap-3">
-              <button type="submit" class="btn btn-danger btn-lg w-100 py-3 fw-bold rounded-pill">Confirmar y Enviar Pedido</button>
+              <button type="submit" class="btn btn-peluche btn-lg w-100 py-3 rounded-pill shadow-sm">Confirmar y Enviar Pedido</button>
               <button type="reset" class="btn btn-outline-secondary btn-lg rounded-pill px-4" id="btnReset">Limpiar</button>
             </div>
 
@@ -188,10 +186,16 @@
       </div>
     </div>
   </main>
-<!--Pie de paginaa-->
-  <footer class="py-4 text-center bg-white mt-5 border-top">
-    <p class="mb-0 fw-bold text-muted">El Mundo Esponjoso de los Peluches</p>
+
+  <!-- Pie de página -->
+  <footer class="py-4 text-center mt-5 bg-white border-top">
+    <div class="container">
+      <p class="mb-1 fw-bold">El Mundo Esponjoso de los Peluches</p>
+      <small class="text-muted">Proyecto de la Unidad 2 | Aretha Araceli Hernandez Barrera</small>
+    </div>
   </footer>
+
+  <!-- Scripts CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
