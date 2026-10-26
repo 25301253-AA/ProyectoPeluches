@@ -48,3 +48,49 @@ h1, h2, h3, h4, h5, .navbar-brand {
   height: 240px;
   object-fit: cover;
 }
+
+.card-peluche {
+  border: none;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+  overflow: hidden;
+  height: 100%;
+}
+
+.card-peluche:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(255, 158, 187, 0.3);
+}
+
+.card-peluche img {
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: contain !important;
+  background-color: #dc61bb;
+  padding: 12px;
+  border-bottom: 2px solid var(--rosa-suave);
+}
+
+.btn-peluche {
+  background-color: var(--rosa-principal);
+  color: rgb(239, 9, 189);
+  font-weight: 600;
+  border-radius: 25px;
+  border: none;
+  padding: 10px 24px;
+  transition: all 0.3s ease;
+}
+
+.btn-peluche:hover {
+  background-color: var(--rosa-oscuro);
+  color: rgb(188, 10, 120);
+  transform: scale(1.03);
+}
+
+/* Pie de paginaa */
+footer {
+  background-color: #60a0ea;
+  border-top: 3px solid var(--azul-clarito);
+}
