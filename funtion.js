@@ -76,4 +76,21 @@ document.addEventListener('DOMContentLoaded', () => {
       if (txtTotal) txtTotal.textContent = '$0.00 MXN';
     });
   }
+    // Mostrar u ocultar el campo "Otro Peluche" dinámicamente
+    const selectPeluche = document.getElementById('selectPeluche');
+    const boxOtroPeluche = document.getElementById('boxOtroPeluche');
+    const inputOtroPeluche = document.getElementById('inputOtroPeluche');
+
+    if (selectPeluche) {
+      selectPeluche.addEventListener('change', function() {
+        if (this.value === '350_otro') {
+          boxOtroPeluche.classList.remove('d-none');
+          inputOtroPeluche.setAttribute('required', 'required');
+        } else {
+          boxOtroPeluche.classList.add('d-none');
+          inputOtroPeluche.removeAttribute('required');
+          inputOtroPeluche.value = '';
+        }
+      });
+    }
 });
