@@ -72,7 +72,7 @@
               </div>
             </div>
 
-            <!--Selección y Personalización -->
+            <!-- 2. Selección y Personalización -->
             <h5 class="fw-bold text-secondary mb-3 border-bottom pb-2">2. Selección y Personalización</h5>
             <div class="row g-3 mb-3">
               <div class="col-md-8">
@@ -90,13 +90,23 @@
                     <option value="360">Gato Lucifer Esponjoso - $360 MXN</option>
                     <option value="420">Stitch Gigante Azul - $420 MXN</option>
                   </optgroup>
+                  <optgroup label="Personalizado / Especial">
+                    <option value="350_otro">-- Otro / Peluche Personalizado (Desde $350 MXN) --</option>
+                  </optgroup>
                 </select>
-                <div class="invalid-feedback">Selecciona un peluche.</div>
+                <div class="invalid-feedback">Selecciona un peluche de la lista.</div>
               </div>
               <div class="col-md-4">
                 <label for="inputCantidad" class="form-label fw-semibold">Cantidad *</label>
                 <input type="number" class="form-control rounded-pill px-3" id="inputCantidad" min="1" max="20" value="1" required>
               </div>
+            </div>
+
+            <!-- Campo opcional/dinámico si eligen "Otro" -->
+            <div class="mb-3 d-none" id="boxOtroPeluche">
+              <label for="inputOtroPeluche" class="form-label fw-semibold text-danger">¿Qué peluche te gustaría pedir? *</label>
+              <input type="text" class="form-control rounded-pill px-3" id="inputOtroPeluche" placeholder="Ej. Hello Kitty, Bob Esponja, Pikachu, etc.">
+              <div class="invalid-feedback">Escribe el nombre del peluche que deseas.</div>
             </div>
 
             <!-- Tamaño -->
