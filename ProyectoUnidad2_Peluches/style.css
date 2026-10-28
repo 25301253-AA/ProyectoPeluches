@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@400;600;700&display=swap');
+
+:root {
+  --rosa-principal: #ff9ebb;
+  --rosa-suave: #fff0f5;
+  --rosa-oscuro: #8b3a62;
+  --crema-fondo: #fffbf7;
+  --dorado: #d4af37;
+  --texto-oscuro: #4a3b40;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--crema-fondo);
+  color: var(--texto-oscuro);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: 'Fredoka', cursive;
+}
+.navbar-custom {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(255, 158, 187, 0.2);
+}
+.brand-logo {
+  height: 50px !important;
+  width: 50px !important;
+  min-height: 50px !important;
+  min-width: 50px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  border: 2px solid var(--rosa-principal) !important;
+  display: inline-block !important;
+}
+.carousel-compact {
+  max-width: 380px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border: 4px solid #ffffff;
+  background-color: #fff;
+}
+
+.carousel-compact img {
+  height: 240px;
+  object-fit: cover;
+}
+
+.card-peluche {
+  border: none;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+  overflow: hidden;
+  height: 100%;
+}
+
+.card-peluche:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(255, 158, 187, 0.3);
+}
+
+.card-peluche img {
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: contain !important;
+  background-color: #dc61bb;
+  padding: 12px;
+  border-bottom: 2px solid var(--rosa-suave);
+}
+
+.btn-peluche {
+  background-color: var(--rosa-principal);
+  color: rgb(239, 9, 189);
+  font-weight: 600;
+  border-radius: 25px;
+  border: none;
+  padding: 10px 24px;
+  transition: all 0.3s ease;
+}
+
+.btn-peluche:hover {
+  background-color: var(--rosa-oscuro);
+  color: rgb(188, 10, 120);
+  transform: scale(1.03);
+}
+
+/* Pie de paginaa */
+footer {
+  background-color: #60a0ea;
+  border-top: 3px solid var(--azul-clarito);
+}

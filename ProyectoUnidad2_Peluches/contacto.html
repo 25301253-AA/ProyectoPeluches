@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Mundo Esponjoso de los Peluches | Realizar Pedido</title>
+  
+  <!-- CSS de Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Íconos y Animaciones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-2">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="index1.html">
+        <img src="Logo.jpeg" alt="Logo" class="brand-logo">
+        <span class="fw-bold text-dark fs-4">El Mundo Esponjoso de los Peluches</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav fs-5 fw-semibold gap-3 align-items-lg-center mb-0 ps-0" style="list-style: none;">
+          <li class="nav-item"><a class="nav-link text-decoration-none" href="index1.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-decoration-none" href="marvel.html">Marvel</a></li>
+          <li class="nav-item"><a class="nav-link text-decoration-none" href="clasicos.html">Clásicos</a></li>
+          <li class="nav-item"><a class="nav-link text-decoration-none" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link text-decoration-none active text-danger" href="contacto.html">Pedidos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenedor Principal del Formulario -->
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="card card-form shadow-sm p-4 p-md-5 border-0 rounded-4" data-aos="fade-up">
+          
+          <h2 class="fw-bold text-center text-danger mb-2"><i class="fa-solid fa-paper-plane me-2"></i>Formulario de Cotización y Pedidos</h2>
+          <p class="text-center text-muted mb-4">Selecciona tu peluche y completa tus datos. No requiere registro ni base de datos.</p>
+
+          <form id="formPedido" novalidate>
+            
+            <!--Datos del Cliente -->
+            <h5 class="fw-bold text-secondary mb-3 border-bottom pb-2">1. Datos del Cliente</h5>
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label for="inputNombre" class="form-label fw-semibold">Nombre Completo *</label>
+                <input type="text" class="form-control rounded-pill px-3" id="inputNombre" placeholder="Ej. Aretha Hernández" required>
+                <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail" class="form-label fw-semibold">Correo Electrónico *</label>
+                <input type="email" class="form-control rounded-pill px-3" id="inputEmail" placeholder="correo@ejemplo.com" required>
+                <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="inputTelefono" class="form-label fw-semibold">Teléfono de Contacto *</label>
+                <input type="tel" class="form-control rounded-pill px-3" id="inputTelefono" placeholder="773 000 0000" required>
+                <div class="invalid-feedback">Ingresa tu número de teléfono.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="inputFechaEntrega" class="form-label fw-semibold">Fecha Deseada de Entrega *</label>
+                <input type="text" class="form-control rounded-pill px-3" id="inputFechaEntrega" placeholder="Ej. Martes por la tarde" required>
+                <div class="invalid-feedback">Escribe la fecha o día de entrega.</div>
+              </div>
+            </div>
+
+            <!-- 2. Selección y Personalización -->
+            <h5 class="fw-bold text-secondary mb-3 border-bottom pb-2">2. Selección y Personalización</h5>
+            <div class="row g-3 mb-3">
+              <div class="col-md-8">
+                <label for="selectPeluche" class="form-label fw-semibold">Selecciona el Peluche Principal *</label>
+                <select class="form-select rounded-pill px-3" id="selectPeluche" required>
+                  <option value="" disabled selected>-- Selecciona un peluche --</option>
+                  <optgroup label="Marvel">
+                    <option value="320">Spider-Man Chibi - $320 MXN</option>
+                    <option value="350">Iron Man Peluche - $350 MXN</option>
+                    <option value="310">Capitán América - $310 MXN</option>
+                  </optgroup>
+                  <optgroup label="Clásicos">
+                    <option value="380">Snoopy con Ramito - $380 MXN</option>
+                    <option value="390">Lotso Aroma Fresa - $390 MXN</option>
+                    <option value="360">Gato Lucifer Esponjoso - $360 MXN</option>
+                    <option value="420">Stitch Gigante Azul - $420 MXN</option>
+                  </optgroup>
+                  <optgroup label="Personalizado / Especial">
+                    <option value="350_otro">-- Otro / Peluche Personalizado (Desde $350 MXN) --</option>
+                  </optgroup>
+                </select>
+                <div class="invalid-feedback">Selecciona un peluche de la lista.</div>
+              </div>
+              <div class="col-md-4">
+                <label for="inputCantidad" class="form-label fw-semibold">Cantidad *</label>
+                <input type="number" class="form-control rounded-pill px-3" id="inputCantidad" min="1" max="150000" value="1" required>
+              </div>
+            </div>
+
+            <!-- Campo opcional/dinámico si eligen "Otro" -->
+            <div class="mb-3 d-none" id="boxOtroPeluche">
+              <label for="inputOtroPeluche" class="form-label fw-semibold text-danger">¿Qué peluche te gustaría pedir? *</label>
+              <input type="text" class="form-control rounded-pill px-3" id="inputOtroPeluche" placeholder="Ej. Hello Kitty, Bob Esponja, Pikachu, etc.">
+              <div class="invalid-feedback">Escribe el nombre del peluche que deseas.</div>
+            </div>
+
+            <!-- Tamaño -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold d-block">Tamaño del Peluche:</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="radioTamano" id="tamanoEstandar" value="0" checked>
+                <label class="form-check-label" for="tamanoEstandar">Estándar (30 cm)</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="radioTamano" id="tamanoMediano" value="50">
+                <label class="form-check-label" for="tamanoMediano">Mediano (+ $50 MXN)</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="radioTamano" id="tamanoGrande" value="120">
+                <label class="form-check-label" for="tamanoGrande">Gigante (+ $120 MXN)</label>
+              </div>
+            </div>
+
+            <!-- Adicionales -->
+            <div class="mb-4">
+              <label class="form-label fw-semibold d-block">Adicionales y Presentación:</label>
+              <div class="row g-2">
+                <div class="col-sm-4">
+                  <div class="form-check">
+                    <input class="form-check-input extra-check" type="checkbox" value="35" id="checkRegalo">
+                    <label class="form-check-label" for="checkRegalo">Empaque de Regalo (+ $35)</label>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-check">
+                    <input class="form-check-input extra-check" type="checkbox" value="25" id="checkTarjeta">
+                    <label class="form-check-label" for="checkTarjeta">Tarjeta Dedicatoria (+ $25)</label>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-check">
+                    <input class="form-check-input extra-check" type="checkbox" value="40" id="checkPerfume">
+                    <label class="form-check-label" for="checkPerfume">Aroma Especial (+ $40)</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Envío y Especificaciones -->
+            <h5 class="fw-bold text-secondary mb-3 border-bottom pb-2">3. Envío y Especificaciones</h5>
+            <div class="mb-3">
+              <label for="inputDireccion" class="form-label fw-semibold">Dirección Completa de Envío *</label>
+              <input type="text" class="form-control rounded-pill px-3" id="inputDireccion" placeholder="Calle, Número, Colonia, Ciudad" required>
+              <div class="invalid-feedback">Escribe la dirección de entrega.</div>
+            </div>
+
+            <div class="mb-4">
+              <label for="inputMensaje" class="form-label fw-semibold">Notas Especiales o Dedicatoria *</label>
+              <textarea class="form-control rounded-4 p-3" id="inputMensaje" rows="3" placeholder="Escribe aquí las notas..." required></textarea>
+              <div class="invalid-feedback">Agrega alguna nota o escribe N/A.</div>
+            </div>
+
+            <!-- Total Calculado -->
+            <div class="p-3 bg-light rounded-4 border d-flex justify-content-between align-items-center mb-4">
+              <div>
+                <span class="fw-bold fs-5 text-secondary">Total Calculado:</span>
+                <small class="d-block text-muted">Incluye peluche, tamaño y extras</small>
+              </div>
+              <span class="fw-bold fs-3 text-danger" id="txtTotal">$0.00 MXN</span>
+            </div>
+
+            <!-- Términos -->
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="checkTerminos" required>
+              <label class="form-check-label text-muted small" for="checkTerminos">
+                Acepto los términos de compra y confirmo que la información es correcta *
+              </label>
+              <div class="invalid-feedback">Debes aceptar los términos.</div>
+            </div>
+
+            <!-- Botones de Acción -->
+            <div class="d-flex gap-3">
+              <button type="submit" class="btn btn-peluche btn-lg w-100 py-3 rounded-pill shadow-sm">Confirmar y Enviar Pedido</button>
+              <button type="reset" class="btn btn-outline-secondary btn-lg rounded-pill px-4" id="btnReset">Limpiar</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="py-4 text-center mt-5 bg-white border-top">
+    <div class="container">
+      <p class="mb-1 fw-bold">El Mundo Esponjoso de los Peluches</p>
+      <small class="text-muted">Proyecto de la Unidad 2 | Aretha Araceli Hernandez Barrera</small>
+    </div>
+  </footer>
+
+  <!-- Scripts CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="funtion.js"></script>
+</body>
+</html>
